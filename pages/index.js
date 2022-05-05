@@ -1,5 +1,6 @@
 import {
 	Box,
+	Link,
 	Button,
 	Container,
 	Heading,
@@ -20,7 +21,6 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
 
 import { FaTelegram, FaGithub, FaLinkedin } from 'react-icons/fa';
-import Link from 'next/link';
 const Page = () => {
 	return (
 		<Layout>
