@@ -32,7 +32,6 @@ const Page = () => {
 						borderRadius='lg'
 						mt={4}
 					/>
-					<Image src='/images/cover.jpg' alt='Cover' borderRadius='lg' mt={4} />
 				</Box>
 				<Heading
 					as='h1'
