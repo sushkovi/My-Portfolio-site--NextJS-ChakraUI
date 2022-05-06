@@ -21,9 +21,11 @@ import { BioSection, BioYear } from '../components/bio';
 
 import { FaTelegram, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
+import Head from 'next/head';
 const Page = () => {
 	return (
 		<Layout>
+			<Head title='Homepage' />
 			<Container>
 				<Box>
 					<Image
@@ -51,7 +53,10 @@ const Page = () => {
 						<Heading as='h2' size='xl' variant='page-title'>
 							Sushko Vlad
 						</Heading>
-						<Text>Digital Craftzman </Text>
+						<Box display='inline-flex' gap={1}>
+							<Text>Digital Samurai </Text>
+							<Text color='red.600'>侍</Text>
+						</Box>
 					</Box>
 					<Box
 						flexShrink={0}
