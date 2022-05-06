@@ -66,7 +66,7 @@ const Page = () => {
 							maxW='100px'
 							display='inline-block'
 							borderRadius='full'
-							src='/images/sushko.jpg'
+							src='/images/sushkov2.jpeg'
 							alt='Profile image'
 						/>
 					</Box>

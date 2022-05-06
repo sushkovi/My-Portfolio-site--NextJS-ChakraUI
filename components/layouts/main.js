@@ -20,11 +20,17 @@ const Main = ({ children, router }) => {
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta name='twitter:site' content='@MrCoobik' />
 				<meta name='twitter:creator' content='@MrCoobik' />
-				<meta name='twitter:image' content='/cover.jpeg' />
+				<meta
+					name='twitter:image'
+					content='https://sushkovi.vercel.app/cover.jpeg'
+				/>
 				<meta property='og:site_name' content='Vlad Sushko' />
 				<meta name='og:title' content='Vlad Sushko' />
 				<meta property='og:type' content='website' />
-				<meta property='og:image' content='/cover.jpeg' />
+				<meta
+					property='og:image'
+					content='https://sushkovi.vercel.app/cover.jpeg'
+				/>
 			</Head>
 			<Navbar path={router.asPath} />
 			<Container maxW='container.md' pt={14}>
