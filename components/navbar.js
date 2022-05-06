@@ -15,18 +15,22 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import ThemeToggleButton from './theme-toggle-button';
+import { FaGithub } from 'react-icons/fa';
 
 import { HamburgerIcon } from '@chakra-ui/icons';
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
 	const active = path === href;
 	const inactiveColor = useColorModeValue('gray.900', 'whiteAlpha.900');
 	return (
-		<NextLink href={href} passHref>
+		<NextLink href={href} passHref scroll={false}>
 			<Link
 				p={2}
 				bg={active ? 'glassTeal' : undefined}
 				color={active ? '#202023' : inactiveColor}
+				target={target}
+				{...props}
+				borderRadius='lg'
 			>
 				{children}
 			</Link>
@@ -65,11 +69,23 @@ const Navbar = (props) => {
 					flexGrow={1}
 					mt={{ base: 4, mnd: 0 }}
 				>
-					<LinkItem href='/works' path={path}>
+					<LinkItem href='/' path={path}>
+						Home
+					</LinkItem>
+					<LinkItem href='/soon' path={path}>
 						Works
 					</LinkItem>
-					<LinkItem href='/' path={path}>
-						About
+					<LinkItem
+						href='https://github.com/sushkovi'
+						path={path}
+						target='_blank'
+						display='inline-flex'
+						alignItems='center'
+						style={{ gap: 4 }}
+						pl={2}
+					>
+						<FaGithub />
+						GitHub
 					</LinkItem>
 				</Stack>
 				<Box flex={1} align='right'>
@@ -83,12 +99,19 @@ const Navbar = (props) => {
 								aria-label='Options'
 							/>
 							<MenuList>
-								<NextLink href='/works' passHref>
+								<NextLink href='/' passHref>
+									<MenuItem as={Link}>Home</MenuItem>
+								</NextLink>
+								<NextLink href='/soon' passHref>
 									<MenuItem as={Link}>Works</MenuItem>
 								</NextLink>
-								<NextLink href='/' passHref>
-									<MenuItem as={Link}>About</MenuItem>
-								</NextLink>
+								<MenuItem
+									target='_blank'
+									as={Link}
+									href='https://github.com/sushkovi'
+								>
+									GitHub
+								</MenuItem>
 							</MenuList>
 						</Menu>
 					</Box>
