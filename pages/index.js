@@ -87,7 +87,7 @@ const Page = () => {
 						learning React Native
 					</Paragraph>
 					<Box align='center' my={4}>
-						<NextLink href='/works' passHref>
+						<NextLink href='/soon' passHref>
 							<Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
 								My Portfolio
 							</Button>
