@@ -20,7 +20,7 @@ const Layout = ({ children, title }) => (
 		<>
 			{title && (
 				<Head>
-					<title>{title} - Vlad Sushko</title>{' '}
+					<title>{title} - Vlad Sushko</title>
 				</Head>
 			)}
 			{children}

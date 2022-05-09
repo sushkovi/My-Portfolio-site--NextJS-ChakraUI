@@ -1,26 +1,22 @@
 import Navbar from '../navbar';
-import { Box, Container, useColorModeValue } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import Head from 'next/head';
-const Main = ({ children, router, title = 'Page' }) => {
+
+const Main = ({ children, router }) => {
 	return (
 		<Box as='main' pb={8}>
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<title>{title} - Sushko Vlad</title>
 				<meta
 					name='description'
 					content='Sushko Vlad - Front End developer in Minsk'
 				/>
-
 				<meta name='author' content='Vlad Sushko' />
 				<meta name='author' content='sushkovi' />
 				<link rel='apple-touch-icon' href='/apple-touch-icon.png' />
 				<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
 				<meta name='twitter:title' content='Vlad Sushko' />
-				<meta
-					name='theme-color'
-					content={useColorModeValue('#f0e7db', '#202023')}
-				/>
+
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta name='twitter:site' content='@MrCoobik' />
 				<meta name='twitter:creator' content='@MrCoobik' />
@@ -43,4 +39,5 @@ const Main = ({ children, router, title = 'Page' }) => {
 		</Box>
 	);
 };
+
 export default Main;

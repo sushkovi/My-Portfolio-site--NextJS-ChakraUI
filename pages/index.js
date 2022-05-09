@@ -21,11 +21,10 @@ import { BioSection, BioYear } from '../components/bio';
 
 import { FaTelegram, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
-import Head from 'next/head';
+
 const Page = () => {
 	return (
-		<Layout>
-			<Head title='Homepage' />
+		<Layout title='About'>
 			<Container>
 				<Box>
 					<Image
@@ -92,8 +91,8 @@ const Page = () => {
 						learning React Native
 					</Paragraph>
 					<Box align='center' my={4}>
-						<NextLink href='/soon' passHref>
-							<Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
+						<NextLink href='/soon'>
+							<Button rightIcon={<ChevronRightIcon />} colorScheme='telegram'>
 								My Portfolio
 							</Button>
 						</NextLink>
@@ -145,10 +144,10 @@ const Page = () => {
 					</Heading>
 					<List>
 						<ListItem>
-							<Link href='tel:+375293635845' target='_blank' passHref>
+							<Link href='tel:+375293635845' target='_blank'>
 								<Button
 									variant='ghost'
-									colorScheme='teal'
+									colorScheme='telegram'
 									leftIcon={<Icon as={FaPhoneAlt} />}
 								>
 									+375 (29) 363-58-45
@@ -156,14 +155,10 @@ const Page = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link
-								href='mailto:works.sushko@gmail.com'
-								target='_blank'
-								passHref
-							>
+							<Link href='mailto:works.sushko@gmail.com' target='_blank'>
 								<Button
 									variant='ghost'
-									colorScheme='teal'
+									colorScheme='telegram'
 									leftIcon={<Icon as={MdMail} />}
 								>
 									works.sushko@gmail.com
@@ -171,10 +166,10 @@ const Page = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link href='https://github.com/sushkovi' target='_blank' passHref>
+							<Link href='https://github.com/sushkovi' target='_blank'>
 								<Button
 									variant='ghost'
-									colorScheme='teal'
+									colorScheme='telegram'
 									leftIcon={<Icon as={FaGithub} />}
 								>
 									@sushkovi
@@ -182,10 +177,10 @@ const Page = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link href='https://t.me/sushko_vlad' target='_blank' passHref>
+							<Link href='https://t.me/sushko_vlad' target='_blank'>
 								<Button
 									variant='ghost'
-									colorScheme='teal'
+									colorScheme='telegram'
 									leftIcon={<Icon as={FaTelegram} />}
 								>
 									@sushko_vlad
@@ -196,11 +191,10 @@ const Page = () => {
 							<Link
 								href='https://www.linkedin.com/in/vladsushko/'
 								target='_blank'
-								passHref
 							>
 								<Button
 									variant='ghost'
-									colorScheme='teal'
+									colorScheme='telegram'
 									leftIcon={<Icon as={FaLinkedin} />}
 								>
 									@vladsushko
@@ -213,4 +207,5 @@ const Page = () => {
 		</Layout>
 	);
 };
+
 export default Page;

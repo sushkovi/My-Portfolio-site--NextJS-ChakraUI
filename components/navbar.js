@@ -1,32 +1,33 @@
-import Logo from './logo';
-import NextLink from 'next/link';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
-	Container,
 	Box,
-	Link,
-	Stack,
-	Heading,
+	Container,
 	Flex,
+	Heading,
+	IconButton,
+	Link,
 	Menu,
+	MenuButton,
 	MenuItem,
 	MenuList,
-	MenuButton,
-	IconButton,
+	Stack,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import ThemeToggleButton from './theme-toggle-button';
+import NextLink from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 
-import { HamburgerIcon } from '@chakra-ui/icons';
+import Logo from './logo';
+import ThemeToggleButton from './theme-toggle-button';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
 	const active = path === href;
 	const inactiveColor = useColorModeValue('gray.900', 'whiteAlpha.900');
+
 	return (
 		<NextLink href={href} passHref scroll={false}>
 			<Link
 				p={2}
-				bg={active ? 'glassTeal' : undefined}
+				bg={active ? 'whiteBlue' : undefined}
 				color={active ? '#202023' : inactiveColor}
 				target={target}
 				{...props}
@@ -99,10 +100,10 @@ const Navbar = (props) => {
 								aria-label='Options'
 							/>
 							<MenuList>
-								<NextLink href='/' passHref>
+								<NextLink href='/'>
 									<MenuItem as={Link}>Home</MenuItem>
 								</NextLink>
-								<NextLink href='/soon' passHref>
+								<NextLink href='/soon'>
 									<MenuItem as={Link}>Works</MenuItem>
 								</NextLink>
 								<MenuItem

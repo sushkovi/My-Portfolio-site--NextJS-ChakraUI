@@ -36,7 +36,7 @@ const fonts = {
 };
 
 const colors = {
-	glassTeal: '#88ccca',
+	whiteBlue: '#A2D4EC',
 };
 
 const config = {
