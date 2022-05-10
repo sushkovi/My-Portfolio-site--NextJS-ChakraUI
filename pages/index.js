@@ -24,7 +24,7 @@ import { MdMail } from 'react-icons/md';
 
 const Page = () => {
 	return (
-		<Layout title='About'>
+		<Layout title='Home'>
 			<Container>
 				<Box>
 					<Image
